@@ -143,7 +143,7 @@ function getempreq(){
                 }
 
 
-				outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-dark">
+				outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-light">
                                     <th>Category</th>
                                     <th>Value</th>
                                 </tr>`;
@@ -190,7 +190,7 @@ function getempreq(){
                                 </tr>`;        
                     
                     outputHtml += `</table>`;
-                    outputHtml += `<button onclick="singleRequest(${input[i].id})">Button</button>`;  
+                    outputHtml += `<button onclick="singleRequest(${input[i].id})">Go to Request</button>`;  
 
                     output.innerHTML = outputHtml;
                 }

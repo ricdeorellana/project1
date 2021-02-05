@@ -98,7 +98,7 @@ function seshInfo(){
             }
 
 
-            outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-dark">
+            outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-light">
                                 <th>Category</th>
                                 <th>Value</th>
                             </tr>`;
@@ -106,10 +106,7 @@ function seshInfo(){
                                 <td>Name of Employee</td>
                                 <td>${input.fullName}</td>
                             </tr>`;
-            outputHtml += `<tr>
-                                <td>Status of Reimbursement Request</td>
-                                <td>${status}</td>
-                            </tr>`;
+        
             //This will be a drop down option
             outputHtml += `<tr>
                             <td>Status of Reimbursement Request</td>

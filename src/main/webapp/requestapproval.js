@@ -131,7 +131,7 @@ function getSuper(){
             }
 
 
-            outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-dark">
+            outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-light">
                                 <th>Category</th>
                                 <th>Value</th>
                             </tr>`;
@@ -139,10 +139,7 @@ function getSuper(){
                                 <td>Name of Employee</td>
                                 <td>${input[i].fullName}</td>
                             </tr>`;
-            outputHtml += `<tr>
-                                <td>Status of Reimbursement Request</td>
-                                <td>${status}</td>
-                            </tr>`;
+           
             //This will be a drop down option
             outputHtml += `<tr>
                             <td>Status of Reimbursement Request</td>
@@ -185,7 +182,7 @@ function getSuper(){
                 
                 outputHtml += `</table>`;
 
-                outputHtml += `<button class="btn btn-success" onclick="singleRequest(${input[i].id})">Button</button>`; 
+                outputHtml += `<button class="btn btn-success" onclick="singleRequest(${input[i].id})">Go to Request</button>`; 
 
                 output.innerHTML = outputHtml;
             }
@@ -290,7 +287,7 @@ function getDep(){
             }
 
 
-            outputHtml += `<table  class="table table-striped table-bordered table-hover"><tr class="table-dark">
+            outputHtml += `<table  class="table table-striped table-bordered table-hover"><tr class="table-light">
                                 <th>Category</th>
                                 <th>Value</th>
                             </tr>`;
@@ -338,7 +335,7 @@ function getDep(){
                            
                 
                 outputHtml += `</table>`;
-                outputHtml += `<button onclick="singleRequest(${input[i].id})">Button</button>`;  
+                outputHtml += `<button onclick="singleRequest(${input[i].id})">Go to Request</button>`;  
 
                 output.innerHTML = outputHtml;
             }
@@ -443,7 +440,7 @@ function getBenCo(){
             }
 
 
-            outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-dark">
+            outputHtml += `<table class="table table-striped table-bordered table-hover"><tr class="table-light">
                                 <th>Category</th>
                                 <th>Value</th>
                             </tr>`;
@@ -489,7 +486,7 @@ function getBenCo(){
                                 <td>${input[i].justification}</td>
                             </tr>`;        
                 outputHtml += `</table>`;
-                outputHtml += `<button onclick="singleRequest(${input[i].id})">Button</button>`;  
+                outputHtml += `<button onclick="singleRequest(${input[i].id})">Go to Request</button>`;  
 
                 output.innerHTML = outputHtml;
             }
