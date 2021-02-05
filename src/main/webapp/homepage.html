@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<title>Home</title>
+</head>
+
+<body onload="sessInfo()">
+    <div class="container-fluid text-center">
+        <div class="d-flex justify-content-center">
+    <div class="row">
+        <div class="col">
+            <h1>Homepage</h1>
+            </div>
+        </div>
+       
+    </div>
+    <h2 class="d-flex justify-content-center">Welcome</h2>
+    
+    <h3 class="d-flex justify-content-center" id="result"></h3>
+
+    <br>
+    <div class="d-flex justify-content-center">
+
+    <div id="request">
+        <h3><a href="http://localhost:8080/Project1/requestform.html">Create a Request</a></h3>
+        <h3><a href="http://localhost:8080/Project1/requests.html">View Your Requests</a></h3>
+        <h3><a href="http://localhost:8080/Project1/requestapproval.html">Approve Requests</a></h3>
+        <h3><a href="http://localhost:8080/Project1/setpreferences.html">Set Up Preferences</a></h3>
+
+    </div>
+    </div>
+    <div class="row">
+        <div class="text-center">
+    <button onclick="logout()" class="btn btn-secondary btn-lg">Logout</button>
+    </div></div>
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+
+<script>
+
+
+function logout(){
+        let xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            	window.location.replace('http://localhost:8080/Project1');
+            }
+          };
+        
+        xhttp.open("GET", "http://localhost:8080/Project1/logout.do", true);
+        xhttp.send();
+        
+        
+    }
+    
+</script>
+
+<script>
+    function sessInfo(){
+        //Make an AJAX call
+    
+        let xhttp = new XMLHttpRequest();
+    
+        xhttp.onreadystatechange = function (){
+    
+            if(this.readyState == 4 && this.status==200){
+                console.log(this.responseText);
+                user = JSON.parse(this.responseText);
+              
+                document.getElementById("result").innerHTML = `<div class="row">
+         <div class="text-center"><h3>${user.fName} ${user.lName}- </h3></div></div>
+         <div class="row"><div class="text-center"><h3> Funds: ${user.funds}</h3></div></div>`;
+            }
+    
+            if(this.readyState ==3){ console.log(3)}
+            if(this.readyState ==2){ console.log(2)}
+            if(this.readyState ==1){ console.log(1)}
+    
+        }
+    
+        xhttp.open("GET", "http://localhost:8080/Project1/loggedIn.do", true );
+    
+        xhttp.send();
+    }</script>
+</html>
