@@ -2,7 +2,7 @@
 ---
 ## Project Description
 
-**Using JS, SQL, and Java to create a Business Webapp.**
+Using JS, SQL, and Java to create a Business Webapp.  
 The following webapp allows for an end-user to sign up, log in, create reinbursement requests, and if the role is befitting, approve requests. 
 ---
 ## Technologies Used
