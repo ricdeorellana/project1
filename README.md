@@ -29,4 +29,4 @@ Upcoming Features:
 ## Getting Started
 To start with, find an empty location to be able to `git clone https://github.com/ricdeorellana/project1.git`
 
-The following project requires a Database in order to function properly. Change the JDBC Connection information underneath 
+The following project requires a Database in order to function properly. Change the JDBC Connection information underneath resources within the file connection.properties to your respective database. Next, set up a schema that matches that of the models. (Message for further help). Afterwards, the application should work with ease.
