@@ -1,11 +1,11 @@
-# Project 1 - Tuiton Reinbursement Management System
+# Project 1 - Tuiton Reinbursement Management System  
 ---
-#Project Description
+## Project Description
 
 **Using JS, SQL, and Java to create a Business Webapp.**
 The following webapp allows for an end-user to sign up, log in, create reinbursement requests, and if the role is befitting, approve requests. 
 ---
-#Technologies Used
+## Technologies Used
 - Java
 - SQL
 - HTML/CSS
@@ -14,7 +14,7 @@ The following webapp allows for an end-user to sign up, log in, create reinburse
 - Apache Tomcat
 - Cucumber
 ---
-#Features
+## Features  
 The following features are present in this build:
 - End-user can sign up and log in with preferred roles
 - All users are able to create reinbursement requests
