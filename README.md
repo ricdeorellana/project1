@@ -13,7 +13,7 @@ The following webapp allows for an end-user to sign up, log in, create reinburse
 - Apache Tomcat
 - Cucumber
 ---
-##
+##Features
 The following features are present in this build:
 - End-user can sign up and log in with preferred roles
 - All users are able to create reinbursement requests
